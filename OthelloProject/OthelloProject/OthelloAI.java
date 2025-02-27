@@ -1,10 +1,9 @@
-package OthelloProject.Opponents;
-
-import OthelloProject.GameState;
-import OthelloProject.IOthelloAI;
-import OthelloProject.Position;
+package OthelloProject;
 
 public class OthelloAI implements IOthelloAI {
+    public OthelloAI() {
+    }
+
     @Override
     public Position decideMove(GameState s) {
         return null;
