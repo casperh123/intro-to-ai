@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="be71d9c9-d906-464c-abb3-f7c4269e053c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OthelloAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/OthelloAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OthelloGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/OthelloGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +28,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Othello.executor": "Debug",
+    "Application.Othello.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -76,32 +78,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1740685123983</updated>
-      <workItem from="1740685125011" duration="3290000" />
+      <workItem from="1740685125011" duration="6639000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/OthelloAI.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/OthelloAI.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/OthelloAI.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

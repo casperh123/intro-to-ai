@@ -1,8 +1,10 @@
 package OthelloProject;
 
-import jdk.jshell.execution.Util;
-
 public class OthelloAI implements IOthelloAI {
+
+    private int depth;
+    private int max_depth = 4;
+
     public OthelloAI() {
     }
 
@@ -18,9 +20,10 @@ public class OthelloAI implements IOthelloAI {
         UtilityMove utilityMove = new UtilityMove(Integer.MIN_VALUE, null);
 
         for(Position position : state.legalMoves()) {
-            state.insertToken(position);
+            GameState newState = new GameState(state.getBoard(), state.getPlayerInTurn());
+            newState.insertToken(position);
 
-            UtilityMove secondMove = MinValue(state);
+            UtilityMove secondMove = MinValue(newState);
 
             if(secondMove.utility > utilityMove.utility) {
                 utilityMove = new UtilityMove(secondMove.utility, position);
@@ -35,12 +38,13 @@ public class OthelloAI implements IOthelloAI {
             return new UtilityMove(Utility(state), null);
         }
 
-        UtilityMove utilityMove = new UtilityMove(Integer.MIN_VALUE, null);
+        UtilityMove utilityMove = new UtilityMove(Integer.MAX_VALUE, null);
 
         for(Position position : state.legalMoves()) {
-            state.insertToken(position);
+            GameState newState = new GameState(state.getBoard(), state.getPlayerInTurn());
+            newState.insertToken(position);
 
-            UtilityMove secondMove = MaxValue(state);
+            UtilityMove secondMove = MinValue(newState);
 
             if(secondMove.utility < utilityMove.utility) {
                 utilityMove = new UtilityMove(secondMove.utility, position);
@@ -51,11 +55,13 @@ public class OthelloAI implements IOthelloAI {
     }
 
     public int Utility(GameState state) {
-        return 1;
+        return state.countTokens()[1];
     }
 
     @Override
     public Position decideMove(GameState s) {
+        depth = 0;
+
         Position position = MiniMax(s);
         return position;
     }
