@@ -5,57 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be71d9c9-d906-464c-abb3-f7c4269e053c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OthelloProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/DumAI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/GameState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/IOthelloAI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/Othello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/OthelloAI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/OthelloGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/OthelloProject.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/Position.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/blackPion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/blackWon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/border_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/border_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/border_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/border_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/corner_left_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/corner_left_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/corner_right_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/corner_right_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/maze.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/tie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/whitePion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OthelloProject/imgs/whiteWon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../intro-to-ai.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/blackPion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/blackWon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/border_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/border_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/border_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/border_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/corner_left_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/corner_left_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/corner_right_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/corner_right_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/maze.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/tie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/whitePion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/intro-to-ai/OthelloProject/imgs/whiteWon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OthelloAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/OthelloAI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +26,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Othello.executor": "Run",
+    "Application.Othello.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -125,11 +76,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1740685123983</updated>
-      <workItem from="1740685125011" duration="1424000" />
+      <workItem from="1740685125011" duration="3290000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OthelloAI.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OthelloAI.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OthelloAI.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
