@@ -2,6 +2,8 @@ package OthelloProject;
 
 import javax.swing.*;
 
+import OthelloProject.DumAI;
+
 import java.io.IOException;
 import java.lang.reflect.*;
 
@@ -22,7 +24,7 @@ public class Othello
     public static void main(String[] args)
     {
         IOthelloAI ai1 = new DumAI();
-        IOthelloAI ai2 = new OthelloAI();
+        IOthelloAI ai2 = new DumAI();
         int size = 8;
 
         boolean err = false;

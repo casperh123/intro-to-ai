@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * GUI to show the Othello game and to listen for input for the user/human player. When it is the user's turn, 
@@ -31,6 +32,8 @@ public class OthelloGUI extends JComponent implements MouseListener
     private Image 		border_left, border_right, border_top, border_bottom;
     private Image 		corner_left_top, corner_left_bottom, corner_right_top, corner_right_bottom;
     private Image 		blackWon, whiteWon, tie;
+  
+    public boolean _move = true;
 
     /**
      * Initializes game
@@ -64,6 +67,9 @@ public class OthelloGUI extends JComponent implements MouseListener
     		this.ai1 = ai1;
     	this.ai2=ai2;
     	this.addMouseListener(this);
+      if (!humanPlayer) {
+        mouseClicked(null);
+      }
     }
 
     /**
@@ -131,6 +137,16 @@ public class OthelloGUI extends JComponent implements MouseListener
    			else
    				illegalMoveAttempted(place);
     		repaint();
+        if (!humanPlayer && !this.state.isFinished()) {
+        new Thread(() -> {
+          try {
+              Thread.sleep(50);
+              mouseClicked(e);
+            } catch (Exception err) {
+              System.out.println(err.getMessage());
+            }
+          }).start();
+        }
     	}
     }
 
