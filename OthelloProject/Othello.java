@@ -21,16 +21,14 @@ public class Othello
      */
     public static void main(String[] args)
     {
-        IOthelloAI ai1 = null;
-        IOthelloAI ai2 = null;
+        IOthelloAI ai1 = new DumAI();
+        IOthelloAI ai2 = new OthelloAI();
         int size = 8;
 
         boolean err = false;
         String errMsg = "You need to supply at least two arguments";
 
         if (args.length >= 2){
-            ai1 = new DumAI();
-            ai2 = new OthelloAI();
             if ( ai2 == null ){
                 errMsg = "Only the first player can be human";
                 err = true;
