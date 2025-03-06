@@ -24,8 +24,8 @@ public class Othello
     public static void main(String[] args)
     {
         IOthelloAI ai1 = new DumAI();
-        IOthelloAI ai2 = new DumAI();
-        int size = 8;
+        IOthelloAI ai2 = new OthelloAI();
+        int size = 5;
 
         boolean err = false;
         String errMsg = "You need to supply at least two arguments";

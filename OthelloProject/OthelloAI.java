@@ -9,10 +9,10 @@ public class OthelloAI implements IOthelloAI {
     }
 
     public Position MiniMax(GameState state) {
-        return MaxValue(state).move;
+        return MaxValue(state, Integer.MAX_VALUE, Integer.MIN_VALUE).move;
     }
 
-    public UtilityMove MaxValue(GameState state) {
+    public UtilityMove MaxValue(GameState state, int alpha, int beta) {
         if(state.isFinished()) {
             return new UtilityMove(Utility(state), null);
         }
@@ -23,17 +23,20 @@ public class OthelloAI implements IOthelloAI {
             GameState newState = new GameState(state.getBoard(), state.getPlayerInTurn());
             newState.insertToken(position);
 
-            UtilityMove secondMove = MinValue(newState);
+            UtilityMove secondMove = MinValue(newState, alpha, beta);
 
             if(secondMove.utility > utilityMove.utility) {
                 utilityMove = new UtilityMove(secondMove.utility, position);
+                alpha = Math.max(alpha, utilityMove.utility);
             }
+
+            if(utilityMove.utility >= beta) return utilityMove;
         }
 
         return utilityMove;
     }
 
-    public UtilityMove MinValue(GameState state) {
+    public UtilityMove MinValue(GameState state, int alpha, int beta) {
         if(state.isFinished()) {
             return new UtilityMove(Utility(state), null);
         }
@@ -44,11 +47,13 @@ public class OthelloAI implements IOthelloAI {
             GameState newState = new GameState(state.getBoard(), state.getPlayerInTurn());
             newState.insertToken(position);
 
-            UtilityMove secondMove = MinValue(newState);
+            UtilityMove secondMove = MaxValue(newState, alpha, beta);
 
             if(secondMove.utility < utilityMove.utility) {
                 utilityMove = new UtilityMove(secondMove.utility, position);
+                beta = Math.min(beta, utilityMove.utility);
             }
+            if(utilityMove.utility <= alpha) return utilityMove;
         }
 
         return utilityMove;
