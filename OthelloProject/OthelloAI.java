@@ -9,10 +9,10 @@ public class OthelloAI implements IOthelloAI {
     }
 
     public Position MiniMax(GameState state) {
-        return MaxValue(state, Integer.MAX_VALUE, Integer.MIN_VALUE).move;
+        return MaxValue(state, new StupidNumber(Integer.MIN_VALUE), new StupidNumber(Integer.MAX_VALUE)).move;
     }
 
-    public UtilityMove MaxValue(GameState state, int alpha, int beta) {
+    public UtilityMove MaxValue(GameState state, StupidNumber alpha, StupidNumber beta) {
         if(state.isFinished()) {
             return new UtilityMove(Utility(state), null);
         }
@@ -27,16 +27,14 @@ public class OthelloAI implements IOthelloAI {
 
             if(secondMove.utility > utilityMove.utility) {
                 utilityMove = new UtilityMove(secondMove.utility, position);
-                alpha = Math.max(alpha, utilityMove.utility);
-            }
-
-            if(utilityMove.utility >= beta) return utilityMove;
+                alpha.Set(Math.max(alpha.Get(), utilityMove.utility));
+            } else if(utilityMove.utility >= beta.Get()) return utilityMove;
         }
 
         return utilityMove;
     }
 
-    public UtilityMove MinValue(GameState state, int alpha, int beta) {
+    public UtilityMove MinValue(GameState state, StupidNumber alpha, StupidNumber beta) {
         if(state.isFinished()) {
             return new UtilityMove(Utility(state), null);
         }
@@ -51,9 +49,8 @@ public class OthelloAI implements IOthelloAI {
 
             if(secondMove.utility < utilityMove.utility) {
                 utilityMove = new UtilityMove(secondMove.utility, position);
-                beta = Math.min(beta, utilityMove.utility);
-            }
-            if(utilityMove.utility <= alpha) return utilityMove;
+                beta.Set(Math.min(beta.Get(), utilityMove.utility));
+            } else if(utilityMove.utility <= alpha.Get()) return utilityMove;
         }
 
         return utilityMove;
@@ -69,6 +66,22 @@ public class OthelloAI implements IOthelloAI {
 
         Position position = MiniMax(s);
         return position;
+    }
+
+    public class StupidNumber {
+        private int Number;
+
+        public StupidNumber(int yoo) {
+            this.Number = yoo;
+        }
+
+        public void Set(int number) {
+            this.Number = number;
+        }
+
+        public int Get() {
+            return Number;
+        }
     }
 
     public class UtilityMove {
